@@ -1,0 +1,5 @@
+// All material copyright ESRI, All Rights Reserved, unless otherwise specified.
+// See http://js.arcgis.com/3.15/esri/copyright.txt and http://www.arcgis.com/apps/webappbuilder/copyright.txt for details.
+//>>built
+define(["dojo/_base/declare","dojo/_base/lang","dojo/on","./settingComponents","./SettingObject"],function(g,h,k,b,l){return g(l,{_inputControl:null,constructor:function(a,d,e,f){a=[];var c;c=b.checkboxCtl("inline-block",!1);a.push(c.div);this._inputControl=c.ctl;f&&this.own(k(this._inputControl,"change",h.hitch(this,f)));e?a.push(b.container("variable-width","minorTrailingVertGap",[b.text("static-text",d),b.text("hint",e)])):a.push(b.text("static-text variable-width",d));this._mainDiv=b.container("full-width flexbox",
+"minorTrailingHorizGap",a)},setValue:function(a){this._inputControl&&this._inputControl.set("value",a)},getValue:function(){if(this._inputControl)return"on"===this._inputControl.get("value")},setConfig:function(){this._inputControl&&this._config&&this.setValue(this._config)},getConfig:function(a,b){this._inputControl&&(this._config=this.getValue())}})});

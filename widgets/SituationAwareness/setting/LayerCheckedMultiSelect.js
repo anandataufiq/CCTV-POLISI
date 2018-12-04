@@ -1,0 +1,4 @@
+// All material copyright ESRI, All Rights Reserved, unless otherwise specified.
+// See http://js.arcgis.com/3.15/esri/copyright.txt and http://www.arcgis.com/apps/webappbuilder/copyright.txt for details.
+//>>built
+define(["dojo/_base/declare","dojox/form/CheckedMultiSelect","dojo/_base/array","dojo/_base/lang"],function(a,c,d,e){return a(c,{startup:function(){this.inherited(arguments);setTimeout(e.hitch(this,function(){this.dropDownButton.set("label",this.label)}))},_updateSelection:function(){this.inherited(arguments);if(this.dropDown&&this.dropDownButton){var b=0;d.forEach(this.options,function(a){b+=a.selected?1:0});this.dropDownButton.set("label",0<b?b+this.nlsValue:this.label)}}})});
