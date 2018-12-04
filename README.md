@@ -1,2 +1,0 @@
-# AAA
-WEBGIS ANANDA
